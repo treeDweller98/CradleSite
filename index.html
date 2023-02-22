@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>CradleSite | A Smart Cradle for your Baby</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/scrollspy-sidebar.css">
+        <script src="js/bootstrap.bundle.min.js" defer></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/icons/logo.png" width="64px" alt="CradleSite logo">
+                </a>
+                
+                <button 
+                    class="navbar-toggler" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" 
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto justify-content-end">
+                        <li class="nav-item"> <a class=" nav-link active" aria-current="page" href="index.html"> Home </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Related Works</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Hardware</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Software</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Demo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <aside class="scrollspy-bar">
+            <ul>
+                <li> <a href="#Introduction" class="dot" data-scroll="Introduction"><span> CradleAI </span></a></li>
+                <li> <a href="#TeamMembers" class="dot" data-scroll="TeamMembers"><span> The Team </span></a></li>
+            </ul>
+
+            <script>
+                $(document).ready(function(){
+                    $(window).on('scroll',function(){
+                        var link = $('.scrollspy-bar a.dot');
+                        var top = $(window).scrollTop();
+                    
+                        $('.sec').each(function(){
+                            var id = $(this).attr('id');
+                            var height = $(this).height();
+                            var offset = $(this).offset().top - 150;
+                            if(top >= offset && top < offset + height){
+                                link.removeClass('active');
+                                $('.scrollspy-bar').find('[data-scroll="' + id + '"]').addClass('active');
+                            }
+                        });
+                    });                  
+                });
+            </script>
+        </aside>
+
+        <main>
+            <section class="sec" id="Introduction">
+
+                <div class="container mb-5">
+                    <h1 class="my-5"> CradleAI </h1>
+
+                    <div class="row gx-5 my-5 px-5">
+                        
+                        <div class="col-md-12 col-lg-6 shadow-lg p-2 mb-5 bg-dark border border-4 border-light rounded">
+                            <div class="my-auto">
+    
+                                <h2 class="text-center pt-5 pb-3">Baby keeping you up at night?</h2>
+    
+                                <div class="px-5 pb-3">
+                                    <p>
+                                        For new parents, a good night's sleep is an unattainable luxury. 
+                                        Constant interruptions leading to sleep deprivation is not healthy for parents.
+                                        Babies left alone to 'cry it out' results in unneccessary stress and may even lead 
+                                        to developmental issues later in life.
+                                    </p>
+                                    <p>
+                                        Enter CradleAI - a smart cradle designed to help parents and their babies sleep better.
+                                        Our proposed solution uses motion sensors to detect baby waking up and employs a cutting 
+                                        edge artificial intelligence to detect the baby's mood. CradleAI dynamically generates 
+                                        a lullaby and controls the rocking motion of the cradle - attempting to put the baby back 
+                                        to sleep without requiring parental supervision unless absolutely neccessary.
+                                    </p>
+                                    <p>Sleep better, stress-free</p>
+                                </div>
+    
+                                
+                            <section id="follow-us-links" class="mb-5">
+                                <h4 class="text-center py-3">follow our project</h4>
+                                <div class="d-flex justify-content-evenly">
+                                    <a title = "github">
+                                        <img class="icon-large" src="img/icons/github.png">
+                                    </a>
+                                    <a title = "YouTube">
+                                        <img class="icon-large" src="img/icons/youtube.png">
+                                    </a>
+                                    <a title = "Mail">
+                                        <img class="icon-large" src="img/icons/mail.png">
+                                    </a>
+                                </div>
+                            </section>
+    
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-lg-6 shadow-lg p-3 py-4 mb-5 bg-light border border-5 border-dark rounded">
+                            
+                            <section id="ID" class="d-flex justify-content-center align-items-center py-4">
+                                <p class="text-end mb-0 lh-1" style="font-variant:small-caps">
+                                    A <br> 
+                                    <strong style="font-size:1.1em;"> CSE441-1: Instrumentation <br> and Measurement </strong> <br>
+                                    Project <br>
+                                    <small>Spring 2023</small>
+                                </p>
+                                <span class="mx-2"></span>
+                                <img src="img/icons/logo_black.png" width="128" alt="CradleSite logo">
+                            </section>
+                            
+                            <section id="download-links" class="py-3">
+                                <h4 class="text-center py-3">download links</h4>
+                                <div class="d-flex justify-content-evenly"">
+
+                                    <div class="d-flex flex-column align-items-center">
+                                        <a href="img/other_assets/CSE441_Team04_Project_Proposal_SmartCradle.pdf">
+                                            <img class="icon-large" src="img/icons/proposal.png" alt="">
+                                        </a> 
+                                        <span class="my-2">Proposal</span>
+                                    </div>
+
+                                    <div class="d-flex flex-column align-items-center">
+                                        <a href="img/other_assets/FahimAhmed_CV.pdf" title="Download Project Report (pending)">
+                                            <img class="icon-large" src="img/icons/report.png" alt="">
+                                        </a>
+                                        <span class="my-2">Report</span>
+                                    </div>
+
+                                    <div class="d-flex flex-column align-items-center">
+                                        <a class="d-flex flex-column" href="img/other_assets/FahimAhmed_CV.pdf" title="Download Project Demo (pending)">
+                                            <img class="icon-large" src="img/icons/demo.png" alt="">
+                                        </a>
+                                        <span class="my-2">Demo</span>
+                                    </div>
+
+                                </div>
+                            </section>
+                            
+
+                            <section id="IUB-address" class="py-3">    
+                                <address class="d-flex flex-column align-items-center py-3">
+                                    <img class="icon-small" src="img/icons/iub.png" alt="">
+                                    <div class="text-center">
+                                        <strong> Independent University, Bangladesh </strong> <br>
+                                        <small>
+                                            Plot 16 Aftab Uddin Ahmed Rd <br/>
+                                            Dhaka 1229 <br/>
+                                        </small>
+                                    </div>
+                                </address>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="sec" id="TeamMembers">
+                
+                <div class="container">
+                    <h1 class="my-5">meet the team</h1>
+
+                    <div class="row align-items-center justify-content-center">
+
+                        <div class="col-lg-6 col-md-10 col-sm-12">
+                            <div class="card text-white bg-dark shadow p-3 mb-2">
+                                <img class="card-img-top" src="img/photos/mysite.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">My First Bootstrap Site</h5>
+                                    <p class="card-text">
+                                        This site actually. Click to visit.
+                                    </p>
+                                    <a 
+                                        class="btn btn-secondary rounded-pill text-dark" 
+                                        onclick = "window.open('https://github.com/treeDweller98/MyPortfolio-CSE309-Midterm','_blank')" 
+                                    >
+                                        visit
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-10 col-sm-12">
+                            <div class="card text-white bg-dark shadow p-3 mb-4">
+                                <img class="card-img-top" src="..." alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    </p>
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+                
+        <footer>
+            <p>&copy 2023 Fahim Ahmed</p>
+            <small> 
+                Made with ♥ <br>
+                CSE441-1 Spring 2023 <br>
+                TEAM-04
+            </small>
+        </footer>
+    </body>
+</html>
