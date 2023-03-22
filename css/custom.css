@@ -72,6 +72,10 @@ form .form-control, form .form-control:focus {
     background-color: rgba(72, 75, 82, 0.925);
 }
 
+li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
 
 /* icons and logos */
 img.icon-small {
